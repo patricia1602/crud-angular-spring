@@ -12,7 +12,7 @@ import { CursosComponent } from './cursos/cursos.component';
   imports: [
     CommonModule,
     CursosRoutingModule,
-    MatTableModule
-  ]
+    MatTableModule,
+    ]
 })
 export class CursosModule { }
