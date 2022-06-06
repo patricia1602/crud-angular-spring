@@ -1,10 +1,10 @@
-package com.leona.crudspring;
+package com.leona.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CrudSpringApplicationTests {
+class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,13 +1,13 @@
-package com.leona.crudspring;
+package com.leona.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CrudSpringApplication {
+public class DemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CrudSpringApplication.class, args);
+		SpringApplication.run(DemoApplication.class, args);
 	}
 
 }
