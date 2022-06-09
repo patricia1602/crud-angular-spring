@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.leona.model.Cursos;
@@ -22,7 +23,7 @@ public class CursosController {
 
 	// @RequestMapping(method = RequestMethod.GET)
 	@GetMapping
-	public List<Cursos> list() {
+	public @ResponseBody List<Cursos> list() {
 		return cursosRepository.findAll();
 
 	}
