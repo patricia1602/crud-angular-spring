@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, Observable, of } from 'rxjs';
 import { ErrorDialogComponent } from 'src/app/shared/components/error-dialog/error-dialog.component';
 
@@ -22,10 +23,13 @@ export class CursosComponent implements OnInit {
 
   constructor(
     private cursosService: CursosService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router: Router,
+    private route: ActivatedRoute
     ) {
     //this.cursos = [];
-   // this.cursosService = new CursosService();
+   //this.cursosService = new CursosService();
+
       this.cursos$ = this.cursosService.list()
       .pipe(
         catchError(error => {
@@ -33,7 +37,6 @@ export class CursosComponent implements OnInit {
           return of([])
         })
       );
-
     //this.cursosService.list().subscribe(cursos => this.cursos = cursos);
   }
 
@@ -45,6 +48,9 @@ export class CursosComponent implements OnInit {
 
   ngOnInit(): void {
 
-  }
+}
 
+onAdd() {
+  this.router.navigate(['new'],  { relativeTo: this.route });
+  }
 }
