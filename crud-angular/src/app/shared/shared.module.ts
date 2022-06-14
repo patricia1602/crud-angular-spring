@@ -12,7 +12,7 @@ import { CategoryPipe } from './pipes/category.pipe';
   ],
   imports: [
     CommonModule,
-    AppMaterialModule
+    AppMaterialModule,
   ],
   exports: [
     ErrorDialogComponent,
