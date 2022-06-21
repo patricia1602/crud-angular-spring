@@ -1,11 +1,11 @@
 package com.leona.repository;
 
+import com.leona.model.Curso;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.leona.model.Cursos;
-
 @Repository
-public interface CursosRepository extends JpaRepository<Cursos, Long> {
+public interface CursoRepository extends JpaRepository<Curso, Long> {
 
 }

@@ -5,8 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.leona.model.Cursos;
-import com.leona.repository.CursosRepository;
+import com.leona.model.Curso;
+import com.leona.repository.CursoRepository;
 
 @SpringBootApplication
 public class CrudSpringApplication {
@@ -15,22 +15,17 @@ public class CrudSpringApplication {
 		SpringApplication.run(CrudSpringApplication.class, args);
 
 	}
-
+	
 	@Bean
-	CommandLineRunner initDatabase(CursosRepository cursosRepository) {
-		return (args) -> {
-			cursosRepository.deleteAll();
+	CommandLineRunner initDatabase(CursoRepository cursoRepository) {
+		return args -> {
+			cursoRepository.deleteAll();
 
-			Cursos c = new Cursos();
+			Curso c = new Curso();
 			c.setName("Angular com Spring");
-			c.setCategory("Front-End");
-			
-			Cursos c2 = new Cursos();
-			c2.setName("Spring api");
-			c2.setCategory("Back-End");
-			
-			cursosRepository.save(c);
-			cursosRepository.save(c2);
+			c.setCategory("front-end");
+
+			cursoRepository.save(c);
 		};
 	}
 }
