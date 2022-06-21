@@ -1,3 +1,7 @@
+.divTable{
+
+}
+
 table {
   width: 100%;
 }
@@ -8,4 +12,29 @@ table {
   display: flex;
   align-items: center ;
   justify-content: center;
+}
+
+.idColumn {
+  width: 10% !important;
+}
+
+.nameColumn {
+  padding-left: 20px;
+  width: 70% !important;
+}
+
+.categoryColumn {
+  width: 20% !important;
+}
+
+.actionsColumn {
+  width: 40% !important;
+  padding: 5px;
+  margin-top: 8px;
+  margin-left: 35px;
+}
+
+.iconCategory {
+  display: flex;
+  align-items: center;
 }
