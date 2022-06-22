@@ -39,7 +39,7 @@ public class CursoController {
 	@PostMapping
 	@ResponseStatus(code = HttpStatus.CREATED)
 	public Curso create(@RequestBody Curso curso) {
-		// System.out.println(course.getName());
+		// System.out.println(curso.getName());
 		return cursoRepository.save(curso);
 		// return ResponseEntity.status(HttpStatus.CREATED)
 		// .body(cursoRepository.save(curso));
