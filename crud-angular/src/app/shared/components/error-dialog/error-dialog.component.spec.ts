@@ -22,4 +22,4 @@ describe('ErrorDialogComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+})
